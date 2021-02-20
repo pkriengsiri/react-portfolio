@@ -1,11 +1,14 @@
-import React from 'react';
+import React from "react";
+import "./Footer.css"
 
 const Footer = () => {
-    return (
-        <div>
-            <h1>Footer goes here</h1>
-        </div>
-    );
+  return (
+    <footer class="footer pt-1 mt-3">
+      <div class="container-fluid text-center">
+        <span class>&#169; Copyright 2020 Pete Kriengsiri</span>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;
