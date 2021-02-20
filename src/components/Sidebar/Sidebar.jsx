@@ -2,10 +2,14 @@ import React from "react";
 import "./Sidebar.css"
 
 const Sidebar = () => {
+  const handleClick = () => {
+    document.querySelector(".sidebar").style.width = "0px";
+  };
+
   return (
     <aside className="sidebar">
       <div id="close-menu">
-        <i className="fas fa-window-close fa-2x" id="hamburger-close"></i>
+        <i className="fas fa-window-close fa-2x" id="hamburger-close" onClick={handleClick}></i>
       </div>
       <div className="list-group list-group-flush sidebar-links h4">
         <a href="./index.html" class="list-group-item">

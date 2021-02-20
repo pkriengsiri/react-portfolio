@@ -1,0 +1,12 @@
+.navbar {
+  background-color: #013a63;
+  font: "Amatic SC";
+}
+
+#open-menu:hover {
+  color: #61a5c2;
+}
+
+#open-menu {
+  color: #a9d6e5;
+}
