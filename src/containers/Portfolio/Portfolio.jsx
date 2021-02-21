@@ -1,11 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 import Main from "../../components/Main/Main";
 import Modal from "../../components/Modal/Modal";
 import Project from "../../components/Project/Project";
 import circleImage from "../../images/portfolio.jpg";
 import projects from "./projects";
+import ProjectContext from "../../contexts/ProjectContext";
 
 const Portfolio = () => {
+  const [project,setProject] = useState({});
+
   const circleImageAlt = "picture of a printed circuit board";
   const content = (
     <>
@@ -14,7 +17,7 @@ const Portfolio = () => {
       </div>
       <div className="row justify-content-center" id="project-list">
         {projects.map((project, index) => {
-          return <Project key={index} {...project} />;
+          return <Project key={index} {...project} details={project} setProject={setProject} />;
         })}
       </div>
     </>
@@ -22,15 +25,15 @@ const Portfolio = () => {
   const title = "Portfolio";
 
   return (
-    <>
-      <Main
-        circleImage={circleImage}
-        circleImageAlt={circleImageAlt}
-        content={content}
-        title={title}
-      />
-      <Modal />
-    </>
+      <ProjectContext.Provider value={project}>
+        <Main
+          circleImage={circleImage}
+          circleImageAlt={circleImageAlt}
+          content={content}
+          title={title}
+        />
+        <Modal />
+      </ProjectContext.Provider>
   );
 };
 

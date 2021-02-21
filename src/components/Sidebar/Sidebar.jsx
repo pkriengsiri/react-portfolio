@@ -7,6 +7,7 @@ const Sidebar = () => {
   const handleClick = () => {
     document.querySelector(".sidebar").style.width = "0px";
   };
+  
 
   return (
     <HashRouter>
