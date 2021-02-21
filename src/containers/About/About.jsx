@@ -39,8 +39,7 @@ const About = () => {
         </p>
         <ul className="list-group mb-3 mx-3">
           <li className="list-group-item">
-            <i className="fas fa-code"></i> In high school, building the
-            constructing the front-page for a family friend’s free internet
+            <i className="fas fa-code"></i> In high school, creating the homepage for a family friend’s free internet
             service provider using HTML 3.
           </li>
           <li className="list-group-item">
@@ -49,7 +48,7 @@ const About = () => {
           </li>
           <li className="list-group-item">
             <i className="fas fa-code"></i> In college, learning JAVA in order to
-            implement a dynamic program algorithm for determining the outcome
+            implement a dynamic program algorithm for determining the outcome of
             NCAA tournament games and optimal bracket selections
           </li>
           <li className="list-group-item">
@@ -73,7 +72,7 @@ const About = () => {
             href="https://secure.atlantahumane.org/site/Donation2?1400.donation=form1&df_id=1400&mfc_pref=T&s_src=basic&s_subsrc=mainnav"
             target="_blank"
           >
-            Atlanta Humane Society
+             Atlanta Humane Society
           </a>
           .
         </p>
