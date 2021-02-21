@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.css";
 import Main from "../../components/Main/Main";
 import circleImage from "../../images/contact.jpg";
 
 const Contact = () => {
-
-
+  const [formData, setFormData] = useState({ subject: "", message: "" });
   const title = "Contact Me";
   const circleImageAlt = "image of a notepad";
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("clicked submit");
+  };
+
   const aboutContent = (
     <div className="row">
       <div className="col-8">
@@ -20,6 +25,11 @@ const Contact = () => {
               className="form-control"
               id="subject-input"
               placeholder="Subject"
+              name="subject"
+              value={formData.subject}
+              onChange={(e) => {
+                setFormData({ ...formData, subject: e.target.value });
+              }}
             />
           </div>
           <div className="form-group">
@@ -29,6 +39,11 @@ const Contact = () => {
               id="message-input"
               rows="3"
               placeholder="Message"
+              name="message"
+              value={formData.message}
+              onChange={(e) => {
+                setFormData({ ...formData, message: e.target.value });
+              }}
             ></textarea>
           </div>
         </form>
@@ -48,18 +63,16 @@ const Contact = () => {
           <i className="fab fa-github-square mr-2"></i>GitHub
         </a>
         <br />
-          <a href="https://www.linkedin.com/in/petekriengsiri/" target="_blank">
-            <i className="fab fa-linkedin mr-2"></i>LinkedIn
-          </a>
-          <br />
-            <a href="mailto:pkriengsiri@gmail.com" target="_blank">
-              <i className="far fa-envelope mr-2"></i>
-            Email
-          </a>
-        </div>
-
+        <a href="https://www.linkedin.com/in/petekriengsiri/" target="_blank">
+          <i className="fab fa-linkedin mr-2"></i>LinkedIn
+        </a>
+        <br />
+        <a href="mailto:pkriengsiri@gmail.com" target="_blank">
+          <i className="far fa-envelope mr-2"></i>
+          Email
+        </a>
+      </div>
     </div>
-
   );
 
   return (
