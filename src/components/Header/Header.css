@@ -10,3 +10,15 @@
 #open-menu {
   color: #a9d6e5;
 }
+
+@media screen and (max-width: 768px) {
+  .navbar-expanded {
+    display:none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-collapse {
+    display:none;
+  }
+}

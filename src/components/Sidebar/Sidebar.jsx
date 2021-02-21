@@ -11,7 +11,7 @@ const Sidebar = () => {
 
   return (
     <HashRouter>
-      <aside className="sidebar">
+      <aside className="sidebar" onBlur={handleClick}>
         <div id="close-menu">
           <i
             className="fas fa-window-close fa-2x"
