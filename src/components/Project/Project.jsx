@@ -7,7 +7,7 @@ const Project = ({image, name}) => {
     let cardImage = require("../../images/"+image);
 
     return (
-        <div className="card card-custom align-items-center">
+        <div className="card card-custom align-items-center" onClick={(e)=>{console.log(name)}}>
             <img className="card-img-top" src={cardImage.default} />
             <div className="card-body">
                 <h3 className="card-title">{name}</h3>
