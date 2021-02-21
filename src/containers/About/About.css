@@ -1,0 +1,6 @@
+#banner {
+    background: transparent url(../../images/banner.jpg) no-repeat center center /
+      cover;
+    height: 200px;
+    margin-bottom: 120px;
+  }
