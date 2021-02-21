@@ -3,6 +3,7 @@ import "./Contact.css";
 import Main from "../../components/Main/Main";
 import circleImage from "../../images/contact.jpg";
 
+
 const Contact = () => {
   const [formData, setFormData] = useState({ subject: "", message: "" });
   const title = "Contact Me";
@@ -11,15 +12,22 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("clicked submit");
+    if(!formData.subject || !formData.message) { 
+        document.getElementById("contact-warning").classList.remove("d-none");
+    } else {
+        document.getElementById("contact-warning").classList.add("d-none");
+        const url=`mailto:pkriengsiri@gmail.com?subject=${formData.subject}&body=${formData.message}`
+        window.open(url);
+    }
   };
 
   const aboutContent = (
     <div className="row">
       <div className="col-8">
-        <form className="ml-1" id="contact-form">
+        <form className="ml-1" id="contact-form" onSubmit={handleSubmit}>
           <h3>Form:</h3>
           <div className="form-group">
-            <label for="subject-input">Subject</label>
+            <label htmlFor="subject-input">Subject</label>
             <input
               type="text"
               className="form-control"
@@ -33,7 +41,7 @@ const Contact = () => {
             />
           </div>
           <div className="form-group">
-            <label for="message-input">Message</label>
+            <label htmlFor="message-input">Message</label>
             <textarea
               className="form-control"
               id="message-input"
@@ -46,16 +54,17 @@ const Contact = () => {
               }}
             ></textarea>
           </div>
+          <p className="d-none ml-1" id="contact-warning">
+            I need both fields filled out before you can send me an email!
+          </p>
+          <button
+            className="btn btn-primary bg-info rounded border-info ml-1 mb-3"
+            type="submit"
+            id="email-button"
+          >
+            Send Email
+          </button>
         </form>
-        <p className="d-none ml-1" id="contact-warning">
-          I need both fields filled out before you can send me an email!
-        </p>
-        <input
-          className="btn btn-primary bg-info rounded border-info ml-1 mb-3"
-          type="submit"
-          value="Send Email"
-          id="email-button"
-        />
       </div>
       <div className="col-4 p-0">
         <h3>Links:</h3>
