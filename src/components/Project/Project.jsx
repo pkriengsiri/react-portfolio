@@ -9,7 +9,6 @@ const Project = ({ image, name, details,setProject}) => {
       className="card card-custom align-items-center"
       onClick={(e) => {
         setProject(details);
-        console.log("click");
         document.getElementById('id01').style.display='block';
       }}
     >

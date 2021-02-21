@@ -7,8 +7,9 @@ import projects from "./projects";
 import ProjectContext from "../../contexts/ProjectContext";
 
 const Portfolio = () => {
-  const [project,setProject] = useState({});
-
+  const [project,setProject] = useState({
+    image: "bird.png"
+  });
   const circleImageAlt = "picture of a printed circuit board";
   const content = (
     <>
