@@ -1,3 +1,7 @@
+.list-group-item {
+  background-color: #01497c;
+}
+
 #banner {
     background: transparent url(../../images/banner.jpg) no-repeat center center /
       cover;

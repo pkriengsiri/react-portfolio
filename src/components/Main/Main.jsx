@@ -1,8 +1,6 @@
 import React from "react";
 import "./Main.css";
 
-
-
 const Main = ({circleImage,circleImageAlt,content,title}) => {
   return (
     <main className="container my-3 rounded" id="main">
