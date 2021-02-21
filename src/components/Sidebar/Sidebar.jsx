@@ -1,6 +1,6 @@
 import React from "react";
 import "./Sidebar.css";
-import { HashRouter, Route, Link } from "react-router-dom";
+import { HashRouter, Link } from "react-router-dom";
 import resume from "../../files/dpk_resume.pdf";
 
 const Sidebar = () => {
@@ -24,12 +24,6 @@ const Sidebar = () => {
           </Link>
           <Link to="/portfolio" className="list-group-item">
             Portfolio
-          </Link>
-          <Link
-            to={resume}
-            className="list-group-item"
-          >
-            Resume
           </Link>
           <a
             href={resume}

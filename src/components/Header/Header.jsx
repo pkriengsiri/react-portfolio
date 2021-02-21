@@ -1,5 +1,6 @@
 import React from "react";
 import "./Header.css";
+import { HashRouter, Link } from "react-router-dom";
 
 const Header = () => {
   const handleClick = () => {
@@ -7,6 +8,7 @@ const Header = () => {
   };
 
   return (
+    <HashRouter>
     <nav className="navbar">
       <div className="col-1" id="open-menu">
         <i
@@ -17,14 +19,13 @@ const Header = () => {
       </div>
       <div className="col-10">
         <div className="row justify-content-center">
-          <a className="h1 font-weight-bold" href="./index.html">
-            Pete Kriengsiri
-          </a>
+          <Link to="/" className="h1 font-weight-bold">Pete Kriengsiri</Link>
         </div>
       </div>
 
       <div className="col-1"></div>
     </nav>
+    </HashRouter>
   );
 };
 
