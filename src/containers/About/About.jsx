@@ -1,7 +1,7 @@
 import React from "react";
 import Main from "../../components/Main/Main";
 import "./About.css";
-import headshot from "../../images/pete.png";
+import circleImage from "../../images/pete.png";
 
 const About = () => {
   const title="About Me";
@@ -82,7 +82,7 @@ const About = () => {
   );
 
   return (
-    <Main circleImage={headshot} circleImageAlt={circleImageAlt} content={aboutContent} title={title}/>
+    <Main circleImage={circleImage} circleImageAlt={circleImageAlt} content={aboutContent} title={title}/>
   );
 };
 

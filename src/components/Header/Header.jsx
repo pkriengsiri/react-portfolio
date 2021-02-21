@@ -9,22 +9,23 @@ const Header = () => {
 
   return (
     <HashRouter>
-    <nav className="navbar">
-      <div className="col-1" id="open-menu">
-        <i
-          className="fas fa-bars fa-2x"
-          id="hamburger-open"
-          onClick={handleClick}
-        ></i>
-      </div>
-      <div className="col-10">
-        <div className="row justify-content-center">
-          <Link to="/" className="h1 font-weight-bold">Pete Kriengsiri</Link>
+      <nav className="navbar">
+        <div className="col-1" id="open-menu">
+          <i
+            className="fas fa-bars fa-2x"
+            id="hamburger-open"
+            onClick={handleClick}
+          ></i>
         </div>
-      </div>
-
-      <div className="col-1"></div>
-    </nav>
+        <div className="col-10">
+          <div className="row justify-content-center">
+            <Link to="/" className="h1 font-weight-bold">
+              Pete Kriengsiri
+            </Link>
+          </div>
+        </div>
+        <div className="col-1"></div>
+      </nav>
     </HashRouter>
   );
 };
