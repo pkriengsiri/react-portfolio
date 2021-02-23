@@ -6,7 +6,7 @@ const Project = ({ image, name, details,setProject}) => {
 
   return (
     <div
-      className="card card-custom align-items-center"
+      className="card card-custom align-items-center animate-card"
       onClick={(e) => {
         setProject(details);
         document.getElementById('id01').style.display='block';
