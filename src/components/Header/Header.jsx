@@ -14,9 +14,6 @@ const Header = () => {
         <div className="col-4">
           <Link to="/" className="h3 mr-4">About</Link>
           <Link to="/portfolio" className="h3 mr-4">Portfolio</Link>
-          <Link to="/contact" className="h3 mr-4">
-            Contact
-          </Link>
           <a
             href={resume}
             target="_blank"

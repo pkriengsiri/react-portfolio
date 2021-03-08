@@ -33,9 +33,6 @@ const Sidebar = () => {
           >
             Resume
           </a>
-          <Link to="/contact" className="list-group-item">
-            Contact
-          </Link>
           <a
             href="https://github.com/pkriengsiri"
             target="_blank"
